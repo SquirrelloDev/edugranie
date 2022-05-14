@@ -129,6 +129,8 @@ body
     margin: 1em 0;
     cursor: pointer;
     transition: transform .3s;
+    text-decoration: none;
+    color: #000;
 }
 .game:hover{
     transform: translateY(-5%);
@@ -211,11 +213,11 @@ body
     position: fixed;
     bottom: 0;
     width: 100%;
-    transform: translateY(100%);
     padding: 1em;
     padding-bottom: 2em;
     display: flex;
     flex-direction: column;
+    transform: translateY(100%);
     background-color: var(--tetiary);
     animation: footer-in .3s 3s forwards;
 }
@@ -309,5 +311,8 @@ body
     .game-heading
     {
         font-size: 4rem;
+    }
+    .footer{
+        justify-content: space-evenly;
     }
 }
