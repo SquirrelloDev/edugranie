@@ -99,12 +99,13 @@ body
 /* GAME CARDS */
 .game-box{
     width: 100%;
+    max-width: 1400px;
     margin-top: 1em;
 }
 .game-heading
 {
-    /* margin-top: 2em; */
-    margin-bottom: 1em;
+    margin-top: .5em;
+    margin-bottom: 3em;
     font-size: 2.2rem;
     text-align: center;
 }
@@ -235,6 +236,7 @@ body
     padding: .5em 2em;
     border-radius: 8px;
     font-weight: 700;
+    color: #000;
     border: 1px solid transparent;;
     background-color: var(--accent);
 }
@@ -281,6 +283,31 @@ body
      margin-bottom: 1.5em;
      font-size: 2.5rem;
  }
+ .footer{
+     padding: 2em;
+     flex-direction: row;
+     justify-content: space-between;
+ }
+ .footer-text-box{
+     margin: 0;
+ }
+ .footer-title
+ {
+     font-size: 2.2rem;
+ }
+ .footer-text
+ {
+     font-size: 1.6rem;
+ }
 }
-
 /* DESKTOPS */
+@media (min-width: 992px) {
+    .game
+    {
+        min-width: 30%;
+    }
+    .game-heading
+    {
+        font-size: 4rem;
+    }
+}
