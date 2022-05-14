@@ -1,0 +1,158 @@
+*,*::before, *::after
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root
+{
+    --primary: #006778;
+    --secondary: #0093AB;
+    --tetiary: #00AFC1;
+    --accent: #FFD124;
+    --accent-2: #EDD167;
+    --mid-black: #323232;
+    --white: #fff;
+}
+html
+{
+    font-size: 62.5%;
+}
+body
+{
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    background-color: var(--primary);
+}
+.game-navigation
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: var(--secondary);
+}
+.game-navigation__content
+{
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    padding: 2em;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.game-title
+{
+    font-size: 2.2rem;
+    color: var(--white);
+}
+.return-btn
+{
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background: none;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+.return-btn:hover .return-text
+{
+    color: #fff;
+}
+.return-btn:visited{
+    text-decoration: none;
+    color: #000;   
+}
+.return-btn__circle
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    background-color: var(--accent);
+    border-radius: 50%;
+}
+.return-btn__circle-arrow
+{
+    pointer-events: none;
+}
+.return-text
+{
+    display: none;
+    text-align: center;
+    justify-self: center;
+    transition: color .3s;
+}
+.settings-box button
+{
+    margin: 0 0.25em;
+    padding: 0.1em;
+    border: 1px solid transparent;
+    background: none;
+}
+.fa-solid
+{
+    color: var(--white);
+    font-size: 2rem;
+}
+.setting-help, .setting-cog
+{
+    cursor: pointer;
+}
+.settings
+{
+    display: none;
+    position: absolute;
+    bottom: -82%;
+    padding: 2em;
+    background-color: var(--secondary);
+    border-radius: 8px;
+}
+.sound
+{
+    font-size: 2rem;
+    color: var(--white);
+
+}
+.fa-volume-high
+{
+    margin-left: .3em;
+}
+.sound-switch
+{
+    padding: 0.1em;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.active
+{
+    display: block;
+}
+@media (min-width:576px)
+{
+    .return-btn
+    {
+        display: flex;
+        align-items: center;
+        background-color: var(--accent-2);
+        border-radius: 30px;
+    }
+    .return-text
+    {
+        display: block;
+        padding: 0 1em;
+        font-weight: 700;
+    }
+}
+@media (min-width: 768px)
+{
+    .game-title
+    {
+        font-size: 3rem;
+    }
+    .return-text
+    {
+        font-size: 2rem;
+    }
+}

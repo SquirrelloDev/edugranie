@@ -1,0 +1,97 @@
+.game{
+    position: relative;
+    z-index: 0;
+}
+#canva
+{
+    
+    width: 100%;
+    min-height: 87vh;
+    background-color: #fff;
+}
+.tools-drawer
+{
+    position: absolute;
+    display: flex;
+    bottom: 20px;
+    z-index: 100;
+}
+.tools{
+    display: flex;
+    width: 160px;
+    align-items: center;
+    padding: 0.5em;
+    background-color: #EDD167;
+    transform-origin: left;
+    transition: width .3s, transform .3s;
+    
+}
+.tools .fa-solid
+{
+    margin: 0 .4em;
+    color: #000;
+}
+#color
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0 0.5em;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+#color::-webkit-color-swatch{
+    width: 100%;
+    height: 100%;
+    /* border-radius: 50%; */
+    border: 1px solid #fff;
+}
+.expand
+{
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    background-color: #FFD124;
+    transform: translateX(-30%);
+    transition: transform .3s;
+    cursor: pointer;
+}
+.expand .fa-solid
+{
+    
+    transition: transform .3s;
+    color: #000;
+}
+.active-expand{
+    transform: translateX(0);
+}
+.hidden
+{
+    width: 0;
+    transform: scaleX(0);
+}
+.active{
+    transform: rotate(-180deg);
+}
+.error-message
+{
+    font-size: 3.6rem;
+    color: tomato;
+    text-align: center;
+}
+.btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.line-size
+{
+    margin: 0 0.5em;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+}
