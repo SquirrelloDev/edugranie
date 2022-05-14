@@ -52,28 +52,175 @@ body
 /* MAIN */
 .main
 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 2em;
 }
 .welcome-section
 {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    position: relative;
+    min-height: 50vh;
+    background-image: url('../img/hero-s.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.welcome-section::before
+{
+    content: '';
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+
 }
 .heading
 {
+    font-size: 2.2rem;
     font-weight: 700;
     color: var(--white);
 }
+.main-heading
+{
+    z-index: 1;
+    margin-bottom: 1em;
+}
+.sub-heading
+{
+    z-index: 1;
+    font-size: 1.8rem;
+    text-align: center;
+}
+/* GAME CARDS */
+.game-box{
+    width: 100%;
+    margin-top: 1em;
+}
+.game-heading
+{
+    /* margin-top: 2em; */
+    margin-bottom: 1em;
+    font-size: 2.2rem;
+    text-align: center;
+}
+.categories{
+    display: flex;
+    flex-direction: column;
+}
+.game-category
+{
+    margin-bottom: 2em;
+}
+.game-category--last
+{
+    margin-bottom: 14em;
+}
+.category-heading
+{
+    font-size: 1.8rem;
+}
+.game{
+    margin: 1em 0;
+    cursor: pointer;
+    transition: transform .3s;
+}
+.game:hover{
+    transform: translateY(-5%);
+}
+.game--soon:hover{
+    transform: translateY(0);
+}
+.games{
+    display: flex;
+    flex-direction: column;
+}
+.game--soon
+{
+    opacity: .9;
+    cursor: not-allowed;
+    transition: none;
+}
+.game-bg
+{
+    min-height: 80px;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    
+}
+.game-bg--first
+{ 
+    background-image: url('../img/liczby-small.jpg');
+}
+.game-bg--second
+{
+    background-image: url('../img/ksztalty.jpg');
+}
+.game-bg--third
+{
+    background-image: url('../img/vocabulary.PNG');
+    background-position-y: 20%;
+}
+.game-bg--fourth
+{
+    background-image: url('../img/sentences.jpg');
+}
+.game-bg--fith
+{
+    background-image: url('../img/memory.png');
+}
+.game-bg--sixth
+{
+    background-image: url('../img/liczby-small.jpg'); /* TO DO: Dodać screen z gry */
+}
+.game-bg--seventh
+{
+    background-image: url('../img/kik-s.jpg');
+}
+.game-bg--eigth
+{
+    background-image: url('../img/puzzle-s.jpg');
+}
+.game-bg--ninth
+{
+    background-image: url('../img/drawing-s.jpg');
+}
+.game-bg--soon
+{
+    background-image: url('../img/soon.jpg');
+    filter: grayscale(100%);
+}
+.game-title
+{
+    padding: .5em;
+    font-size: 1.6rem;
+    font-weight: 400;
+    background-color: var(--white);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+/* FOOTER */
 .footer{
     position: fixed;
     bottom: 0;
+    width: 100%;
     transform: translateY(100%);
     padding: 1em;
+    padding-bottom: 2em;
     display: flex;
     flex-direction: column;
     background-color: var(--tetiary);
     animation: footer-in .3s 3s forwards;
+}
+.footer-title
+{
+    font-size: 1.8rem;
 }
 .footer-text-box{
     margin-bottom: 1.5em;
@@ -97,3 +244,43 @@ body
         transform: translateY(0);
     }
 }
+/* TABLETS */
+@media (min-width: 768px) {
+ .games
+ {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+ }
+ .game{
+    min-width: 40%;
+    margin: 1em;
+ }
+ .main-heading
+ {
+     font-size: 6rem;
+     margin-bottom: 0.5em;
+ }
+ .sub-heading
+ {
+     font-size: 3rem;
+ }
+ .game-heading
+ {
+     font-size: 3rem;
+ }
+ .game-title{
+     font-size: 2rem;
+ }
+ .game-bg
+ {
+     height: 100px;
+ }
+ .category-heading
+ {
+     margin-bottom: 1.5em;
+     font-size: 2.5rem;
+ }
+}
+
+/* DESKTOPS */

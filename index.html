@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/8d5fdb794a.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/menu-main.css">
     <title>edugranie.pl</title>
 </head>
@@ -20,65 +21,94 @@
             <button class="settings-btn"><i class="fa-solid fa-gear"></i></button>
         </div>
     </nav>
+    <header class="welcome-section">
+        <h1 class="heading main-heading">Witaj na Edugranie!</h1>
+        <h3 class="heading sub-heading">Darmowej platformie edukacyjnej dla dzieci</h3>
+    </header>
     <main class="main">
-        <section class="welcome-section">
-            <h1 class="heading main-heading">Witaj na Edugranie!</h1>
-            <h3 class="heading sub-heading">Darmowej platformie edukacyjnej dla dzieci</h3>
-        </section>
         <div class="game-box">
             <h2 class="heading game-heading">Wybierz grę</h2>
-            <div class="accordion-box">
-                <div class="accordion-item">
-                    <button class="accordion-item-btn">
-                        Matematyka <i class="fa-solid fa-sort-down"></i>
-                    </button>
-                    <div class="accordion-info">
+            <div class="categories">
+                <div data-aos="fade-up" class="game-category">
+                    <h2 class="heading category-heading">Matematyka</h2>
+                    <div class="games">
                         <div class="game">
-                            <div class="game-bg"></div>
-                            <div class="game-title"></div>
-                        </div>
+                         <div class="game-bg game-bg--first"></div>
+                         <p class="game-title">Liczby</p>
+                     </div>
+                        <div class="game">
+                         <div class="game-bg game-bg--second"></div>
+                         <p class="game-title">Figury</p>
+                     </div>
+                        <div class="game game--soon">
+                         <div class="game-bg game-bg--soon"></div>
+                         <p class="game-title">Wkrótce więcej gier!</p>
+                     </div>
                     </div>
                 </div>
-                    <button class="accordion-item-btn">
-                        Matematyka <i class="fa-solid fa-sort-down"></i>
-                    </button>
-                    <div class="accordion-info">
+                <div data-aos="fade-up" class="game-category">
+                    <h2 class="heading category-heading">Angielski</h2>
+                    <div class="games">
                         <div class="game">
-                            <div class="game-bg"></div>
-                            <div class="game-title"></div>
-                        </div>
+                         <div class="game-bg game-bg--third"></div>
+                         <p class="game-title">Słówka</p>
+                     </div>
+                        <div class="game">
+                         <div class="game-bg game-bg--fourth"></div>
+                         <p class="game-title">Zdania</p>
+                     </div>
+                     <div class="game game--soon">
+                        <div class="game-bg game-bg--soon"></div>
+                        <p class="game-title">Wkrótce więcej gier!</p>
+                    </div>
                     </div>
                 </div>
-                    <button class="accordion-item-btn">
-                        Matematyka <i class="fa-solid fa-sort-down"></i>
-                    </button>
-                    <div class="accordion-info">
+                <div data-aos="fade-up" class="game-category">
+                    <h2 class="heading category-heading">Trening umysłu</h2>
+                    <div class="games">
                         <div class="game">
-                            <div class="game-bg"></div>
-                            <div class="game-title"></div>
-                        </div>
+                         <div class="game-bg game-bg--fith"></div>
+                         <p class="game-title">Pamięciówka</p>
+                     </div>
+                        <div class="game">
+                         <div class="game-bg game-bg--sixth"></div>
+                         <p class="game-title">Kolorowe szaleństwo</p>
+                     </div>
+                     <div class="game game--soon">
+                        <div class="game-bg game-bg--soon"></div>
+                        <p class="game-title">Wkrótce więcej gier!</p>
+                    </div>
                     </div>
                 </div>
-                    <button class="accordion-item-btn">
-                        Matematyka <i class="fa-solid fa-sort-down"></i>
-                    </button>
-                    <div class="accordion-info">
+                <div data-aos="fade-up" class="game-category">
+                    <h2 class="heading category-heading">Łamigłówki</h2>
+                    <div class="games">
                         <div class="game">
-                            <div class="game-bg"></div>
-                            <div class="game-title"></div>
-                        </div>
+                         <div class="game-bg game-bg--seventh"></div>
+                         <p class="game-title">Kółko i krzyżyk</p>
+                     </div>
+                        <div class="game">
+                         <div class="game-bg game-bg--eigth"></div>
+                         <p class="game-title">Puzzle</p>
+                     </div>
+                     <div class="game game--soon">
+                        <div class="game-bg game-bg--soon"></div>
+                        <p class="game-title">Wkrótce więcej gier!</p>
+                    </div>
                     </div>
                 </div>
-                    <button class="accordion-item-btn">
-                        Matematyka <i class="fa-solid fa-sort-down"></i>
-                    </button>
-                    <div class="accordion-info">
+                <div data-aos="fade-up" class="game-category game-category--last">
+                    <h2 class="heading category-heading">Moc wyobraźni</h2>
+                    <div class="games">
                         <div class="game">
-                            <div class="game-bg"></div>
-                            <div class="game-title"></div>
-                        </div>
+                         <div class="game-bg game-bg--ninth"></div>
+                         <p class="game-title">Kolorowanka</p>
+                     </div>
+                     <div class="game game--soon">
+                        <div class="game-bg game-bg--soon"></div>
+                        <p class="game-title">Wkrótce więcej gier!</p>
                     </div>
-                </div>
+                    </div>
             </div>
         </div>
     </main>
@@ -88,6 +118,10 @@
             <p class="footer-text">Każda opinia pomaga ulepszać naszą platforme i wzbogacać o nowe doświadczenia</p>
         </div>
         <button class="opinion-btn">Prześlij opinię</button>
-    </footer>    
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
