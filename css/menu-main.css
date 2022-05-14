@@ -135,6 +135,10 @@ body
 .game:hover{
     transform: translateY(-5%);
 }
+.game:visited{
+    text-decoration: none;
+    color: #000;
+}
 .game--soon:hover{
     transform: translateY(0);
 }
