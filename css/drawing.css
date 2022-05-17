@@ -26,6 +26,9 @@
     transition: width .3s, transform .3s;
     
 }
+.fa-arrow-left{
+    color: #000;
+}
 .tools .fa-solid
 {
     margin: 0 .4em;

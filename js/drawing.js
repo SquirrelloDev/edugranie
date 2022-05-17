@@ -98,5 +98,6 @@ downloadBtn.addEventListener('click', ()=>{
 clearBtn.addEventListener('click', ()=>{
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 });
+window.scrollBy(0 ,window.innerHeight);
 }
 
