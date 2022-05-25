@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nazwa gry | Edugranie.pl</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/8d5fdb794a.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Dodaj swój własny plik CSS poniżej menu -->
+    <link rel="stylesheet" href="../css/menu.css"> 
+    <link rel="stylesheet" href="../css/vocab.css">
+    <script src="../js/util.js" defer></script>
+    <!-- Zmień nazwę pliku JS na nazwę gry -->
+    <script src="../js/vocab.js" defer></script>
+</head>
+<body>
+    <nav class="game-navigation">
+        <div class="game-navigation__content">
+            <a href="../index.html" class="return-btn"><div class="return-btn__circle"><i class="fa-solid fa-arrow-left"></i></div><p class="return-text">Powrót</p></a>
+            <h1 class="game-title">Połącz słówka</h1>
+            <div class="settings-box"><button class="setting-help"><i class="fa-solid fa-circle-question"></i></button><button class="setting-cog"><i class="fa-solid fa-gear"></i></button></div>
+        </div>
+        <div class="settings">
+            <p class="sound">Dźwięki <button class="sound-switch"><i class="fa-solid fa-volume-high"></i></button></p>
+        </div>
+    </nav>
+    <section class="game">
+        <!-- Umieść tu kod HTML gry -->
+            <div class="image-box"><img src="../img/vocab/oranges.jpg" alt=""></div>
+            <div class="question-box">
+                <p class="question">What do you see?</p>
+                <p class="question">Choose the correct answer</p>
+                <button class="mic-btn"><i class="fa-solid fa-microphone"></i></button>
+            </div>
+            <div class="answer-box">
+                <button class="answer" data-answer="1">answer1</button>
+                <button class="answer" data-answer="2">answer2</button>
+                <button class="answer" data-answer="3">answer3</button>
+                <button class="answer" data-answer="4">answer4</button>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>

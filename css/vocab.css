@@ -1,0 +1,118 @@
+:root
+{
+    --primary: #006778;
+    --secondary: #0093AB;
+    --tetiary: #00AFC1;
+    --accent: #FFD124;
+    --accent-2: #EDD167;
+    --mid-black: #323232;
+    --white: #fff;
+}
+
+.game{
+    min-height: calc(100vh - 80px);
+    width: 100%;
+    padding: 0 2em;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.image-box{
+    margin: 1em 0;
+    border: 3px solid var(--white);
+    width: 100%;
+    height: 180px;
+}
+.image-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.question-box
+{
+    margin: 1em 0;
+    padding: 1em;
+    width: 100%;
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8rem;
+    border-radius: 8px;
+}
+.mic-btn{
+    margin-top: 1em;
+    padding: 1em;
+    border: 1px solid #fff;
+    background: none;
+    border-radius: 50%;
+    position: relative;
+    align-self: flex-end;
+    transition: border-color .1s, background-color .3s;
+    cursor: pointer;
+}
+.mic-btn:hover{
+    border-color: #FFD124;
+    background-color: #FFD124;
+}
+.mic-btn:hover .fa-microphone{
+    color: #000;
+}
+.mic-btn .fa-microphone{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 1.6rem;
+    transform: translate(-50%,-50%);
+    transition: color .3s;
+}
+.answer-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.answer-box .answer{
+    margin: 0.5em 0;
+    padding: .5em;
+    background-color: var(--tetiary);
+    border-radius: 8px;
+    
+    border: 1px solid transparent;
+    transition: background-color .3s;
+    cursor: pointer;
+}
+.answer-box .answer:hover{
+    background-color: var(--accent);
+}
+@media (min-width: 375px) {
+    .question-box{
+        font-size: 2.2rem;
+    }
+    .answer-box .answer{
+        font-size: 2rem;
+    }
+    .mic-btn{
+        padding: 1.3em;
+    }
+    .mic-btn .fa-microphone{
+        font-size: 1.8rem;
+    }
+}
+@media (min-width: 768px) {
+    .answer-box{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .answer-box .answer{
+        width: 40%;
+        padding: 3em;
+        
+    }
+    .image-box{
+        height: 250px;
+    }
+}
