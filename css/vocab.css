@@ -34,7 +34,7 @@
 }
 .question-box
 {
-    margin: 1em 0;
+    margin: .5em 0;
     padding: 1em;
     width: 100%;
     background-color: var(--secondary);
@@ -42,6 +42,7 @@
     flex-direction: column;
     font-size: 1.8rem;
     border-radius: 8px;
+    color: var(--white);
 }
 .mic-btn{
     margin-top: 1em;
@@ -89,6 +90,7 @@
 }
 @media (min-width: 375px) {
     .question-box{
+        
         font-size: 2.2rem;
     }
     .answer-box .answer{
@@ -109,10 +111,11 @@
     }
     .answer-box .answer{
         width: 40%;
-        padding: 3em;
+        padding: 2em;
         
     }
     .image-box{
-        height: 250px;
+        height: 320px;
+        width: 50%;
     }
 }
