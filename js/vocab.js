@@ -69,12 +69,17 @@ const qaDataBase =[
         answers: ["Spring", "Summer", "Autumn", "Winter"],
         correctAnswer: "Winter"
     }];
-const answerBtns = document.querySelectorAll('.answer');
+const answerBtns = document.querySelectorAll('[data-answer]');
+const restartBtn = document.querySelector()
 const img = document.querySelector('.image-box img');
 const questionNode = document.querySelector('.question:first-child');
 const _path = '../img/vocab/';
-let round = 0;
+let round = 0, score = 0;
 const prepareRound = (round = 0) => {
+    if (round > 9) {
+        console.log('koniec');
+        return;
+    }
     img.setAttribute('src', `${_path}${qaDataBase[round].questionImage}`);
     questionNode.textContent = qaDataBase[round].question;
     const fillArr = randomizeAnswers(round);
@@ -92,17 +97,25 @@ const randomizeAnswers = (round = 0) => {
 }
 const checkAnswer = (e) => {
     if(e.target.textContent === qaDataBase[round].correctAnswer){
-        console.log("git");
+        e.target.classList.add('correct');
+        e.target.classList.remove('hover');
+
         round++;
-        if (round > 9) {
-            console.log('koniec');
-            return;
-        } 
-        setTimeout(prepareRound.bind(null, round), 2000);
+        setTimeout(()=> {
+            e.target.classList.remove('correct')
+            e.target.classList.add('hover');
+        }, 1000);
+        setTimeout(prepareRound.bind(null, round), 1000);
     }
     else{
-        console.log(qaDataBase[round].answers);
-
+        round++;
+        e.target.classList.add('wrong');
+        e.target.classList.remove('hover');
+        setTimeout(()=> {
+            e.target.classList.remove('wrong')
+            e.target.classList.add('hover');
+        }, 1000);
+        setTimeout(prepareRound.bind(null, round), 1000);
     }
 }
 answerBtns.forEach(btn => btn.addEventListener('click', checkAnswer));

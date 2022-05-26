@@ -7,6 +7,7 @@
     --accent-2: #EDD167;
     --mid-black: #323232;
     --white: #fff;
+    --correct: #3cc260;
 }
 
 .game{
@@ -80,13 +81,22 @@
     padding: .5em;
     background-color: var(--tetiary);
     border-radius: 8px;
-    
     border: 1px solid transparent;
     transition: background-color .3s;
     cursor: pointer;
+    color: var(--white);
 }
-.answer-box .answer:hover{
+.answer-box .hover:hover{
     background-color: var(--accent);
+    color: var(--black);
+}
+.answer-box .correct{
+    background-color: var(--correct);
+    color: var(--white);
+}
+.answer-box .wrong{
+    background-color: #c94242;
+    color: var(--white);
 }
 @media (min-width: 375px) {
     .question-box{
