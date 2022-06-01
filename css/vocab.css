@@ -45,30 +45,28 @@
     border-radius: 8px;
     color: var(--white);
 }
-.mic-btn{
+.trl-btn{
     margin-top: 1em;
-    padding: 1em;
-    border: 1px solid #fff;
-    background: none;
-    border-radius: 50%;
-    position: relative;
+    padding: 1.5em;
     align-self: flex-end;
+    position: relative;
+    background: var(--white);
+    border-radius: 4px;
     transition: border-color .1s, background-color .3s;
+    border: 1px solid transparent;
     cursor: pointer;
 }
-.mic-btn:hover{
+.trl-btn:hover{
     border-color: #FFD124;
     background-color: #FFD124;
 }
-.mic-btn:hover .fa-microphone{
-    color: #000;
-}
-.mic-btn .fa-microphone{
+.trl-btn .fa-language{
     position: absolute;
     top: 50%;
     left: 50%;
-    font-size: 1.6rem;
+    font-size: 2rem;
     transform: translate(-50%,-50%);
+    color: var(--mid-black);
     transition: color .3s;
 }
 .answer-box{
@@ -98,6 +96,36 @@
     background-color: #c94242;
     color: var(--white);
 }
+.answer-heading
+{
+    margin-top: 1.5em;
+    font-size: 2.5rem;
+    text-align: left;
+}
+.last-screen{
+   display: none;
+   flex-direction: column;
+   text-align: center;
+   width: 100%;
+   padding: 1.5em;
+   color: var(--white);
+}
+.last-screen-results{
+    margin-top: 2em;
+    padding-inline-start: 20px;
+}
+.list-item{
+    margin-top: 1em;
+    text-align: left;
+    font-size: 2rem;
+}
+.list-item .list-item-box{
+    display: flex;
+    justify-content: space-between;
+}
+.list-item .list-item-box span{
+    margin-top: .5em;
+}
 @media (min-width: 375px) {
     .question-box{
         
@@ -106,11 +134,8 @@
     .answer-box .answer{
         font-size: 2rem;
     }
-    .mic-btn{
+    .trl-btn{
         padding: 1.3em;
-    }
-    .mic-btn .fa-microphone{
-        font-size: 1.8rem;
     }
 }
 @media (min-width: 768px) {
