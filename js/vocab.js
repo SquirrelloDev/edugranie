@@ -105,7 +105,7 @@ const resultsTemplate = document.querySelector('.last-screen-template');
 const orderedList = document.querySelector('.answer-list')
 
 
-let round = 0, score = 0, pulseInterval, pulseTimeout;
+let round = 0, score = 0, pulseInterval, pulseTimeout, polishEnabled;
 const prepareRound = (round = 0) => {
     if (round > 9) {
         questionBox.style.display = 'none';
@@ -143,7 +143,7 @@ const prepareRound = (round = 0) => {
             translateBtn.classList.remove('animate__animated');
             translateBtn.classList.remove('animate__heartBeat');
         }, 3000)
-    }, 15000)
+    }, 10000)
     displayAnswers = () => {
         for (let i = 0; i < qaDataBase.length; i++) {
             const answer = document.createElement('li');
@@ -181,6 +181,7 @@ const checkAnswer = (e) => {
     qaDataBase[round].chosenAnswer = e.target.textContent;
     clearInterval(pulseInterval);
     clearTimeout(pulseTimeout);
+    polishEnabled = false;
     if(e.target.textContent === qaDataBase[round].correctAnswer){
         e.target.classList.add('correct');
         e.target.classList.remove('hover');
@@ -214,5 +215,15 @@ newGameBtn.addEventListener('click', () => {
     lastScreen.style.display = 'none';
     orderedList.textContent = ''
     prepareRound(round);
-})
+});
+translateBtn.addEventListener('click', ()=>{
+    if(polishEnabled){
+        return;
+    }
+    questionNode.textContent = qaDataBase[round].questionPolish;
+    clearInterval(pulseInterval);
+    clearTimeout(pulseTimeout);
+    polishEnabled = true;
+
+});
 prepareRound(round);
