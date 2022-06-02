@@ -151,7 +151,7 @@ const prepareRound = (round = 0) => {
             answer.textContent = `${qaDataBase[i].question}`;
             const answersContent = resultsTemplate.content.cloneNode(true);
             answersContent.querySelector('.user-answer').textContent = `Twoja odpowiedź: ${qaDataBase[i].chosenAnswer}`;
-            answersContent.querySelector('.result-info').style.fontWeight = '700';
+            // answersContent.querySelector('.result-info').style.fontWeight = '700';
             if(qaDataBase[i].chosenAnswer == qaDataBase[i].correctAnswer){
                 answersContent.querySelector('.result-info').style.color = '#3cc260';
                 answersContent.querySelector('.result-info').textContent = `DOBRZE`;

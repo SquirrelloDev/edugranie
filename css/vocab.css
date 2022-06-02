@@ -115,6 +115,7 @@
     padding-inline-start: 20px;
 }
 .last-screen .score-text{
+    margin-top: 1.5em;
     font-size: 2.5rem;
 }
 .last-screen .score{
@@ -146,6 +147,13 @@
 .list-item .list-item-box span{
     margin-top: .5em;
 }
+.user-answer{
+    font-size: 1.6rem;
+}
+.result-info{
+    font-weight: 700;
+    font-size: 1.6rem;
+}
 
 @media (min-width: 375px) {
     .question-box{
@@ -158,6 +166,15 @@
     .trl-btn{
         padding: 1.3em;
     }
+}
+@media (min-width: 425px) {
+    .user-answer{
+        font-size: 2rem;
+    }
+    .result-info{
+        font-size: 2rem;
+    }
+    
 }
 @media (min-width: 768px) {
     .answer-box{
