@@ -316,7 +316,7 @@ body
      font-size: 1.6rem;
  }
  .opinion-btn{
-    width: 15%;
+    width: 20%;
 }
 }
 /* DESKTOPS */
@@ -331,6 +331,9 @@ body
     }
     .footer{
         justify-content: space-evenly;
+    }
+    .opinion-btn{
+        width: 10%;
     }
 
 }
