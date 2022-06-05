@@ -143,7 +143,8 @@ const prepareRound = (round = 0) => {
             translateBtn.classList.remove('animate__animated');
             translateBtn.classList.remove('animate__heartBeat');
         }, 3000)
-    }, 10000)
+    }, 10000);
+
     displayAnswers = () => {
         for (let i = 0; i < qaDataBase.length; i++) {
             const answer = document.createElement('li');
@@ -151,7 +152,6 @@ const prepareRound = (round = 0) => {
             answer.textContent = `${qaDataBase[i].question}`;
             const answersContent = resultsTemplate.content.cloneNode(true);
             answersContent.querySelector('.user-answer').textContent = `Twoja odpowiedź: ${qaDataBase[i].chosenAnswer}`;
-            // answersContent.querySelector('.result-info').style.fontWeight = '700';
             if(qaDataBase[i].chosenAnswer == qaDataBase[i].correctAnswer){
                 answersContent.querySelector('.result-info').style.color = '#3cc260';
                 answersContent.querySelector('.result-info').textContent = `DOBRZE`;
@@ -191,6 +191,7 @@ const checkAnswer = (e) => {
             e.target.classList.remove('correct')
             e.target.classList.add('hover');
         }, 1000);
+        answerBtns.forEach(btn => btn.disabled = true);
         setTimeout(prepareRound.bind(null, round), 1000);
     }
     else{
@@ -225,5 +226,8 @@ translateBtn.addEventListener('click', ()=>{
     clearTimeout(pulseTimeout);
     polishEnabled = true;
 
+});
+tippy('.trl-btn',{
+    content: 'Przetłumacz pytanie',
 });
 prepareRound(round);

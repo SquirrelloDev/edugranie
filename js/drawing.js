@@ -11,7 +11,8 @@ const downloadBtn = tools.querySelector('.download');
 const clearBtn = tools.querySelector('.fa-trash-can');
 const sizeBtn = tools.querySelector('.size');
 const sizeDot = sizeBtn.querySelector('.line-size');
-let sizeIndex = 0;
+const brushSizes = ["mały", "średni", "duży"];
+let sizeIndex = 0, sizeText = brushSizes[0];
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     canvas.remove();
     toolBox.remove();
@@ -88,6 +89,8 @@ sizeBtn.addEventListener('click', () => {
             break;            
     }
     sizeIndex++;
+   
+    
     })
 downloadBtn.addEventListener('click', ()=>{
     console.log('xd');
@@ -99,5 +102,17 @@ clearBtn.addEventListener('click', ()=>{
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 });
 window.scrollBy(0 ,window.innerHeight);
+tippy('#color', {
+    content: "Wybór koloru"
+});
+tippy('.size', {
+    content: `Zmień grubość pędzla`
+});
+tippy('.download', {
+    content: "Pobierz obrazek"
+});
+tippy('.fa-trash-can', {
+    content: "Wyczyść płótno"
+});
 }
 
