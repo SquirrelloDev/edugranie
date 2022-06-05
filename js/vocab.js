@@ -135,7 +135,10 @@ const prepareRound = (round = 0) => {
     img.setAttribute('src', `${_path}${qaDataBase[round].questionImage}`);
     questionNode.textContent = qaDataBase[round].question;
     const fillArr = randomizeAnswers(round);
-    answerBtns.forEach((btn, i) => btn.textContent = fillArr[i]);
+    answerBtns.forEach((btn, i) => {
+        btn.textContent = fillArr[i];
+        btn.disabled = false;
+    });
     pulseInterval = setInterval(() => {
         translateBtn.classList.add('animate__animated')
         translateBtn.classList.add('animate__heartBeat');
