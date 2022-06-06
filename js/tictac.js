@@ -1,3 +1,5 @@
+const respVersion = window.matchMedia("(max-width: 319px)");
+
 function init(player, OPPONENT) {
   const canvas = document.getElementById("cvs");
   const ctx = canvas.getContext("2d");
@@ -5,13 +7,21 @@ function init(player, OPPONENT) {
   let board = [];
   const COLUMN = 3;
   const ROW = 3;
-  const SPACE_SIZE = 150;
+  let SPACE_SIZE;
   let gameData = new Array(9);
   let currentPlayer = player.man;
-  const xImage = new Image();
-  xImage.src = "../img/tictac/X.png";
-  const oImage = new Image();
-  oImage.src = "../img/tictac/O.png";
+  let xImage = new Image();
+  let oImage = new Image();
+  if (respVersion.matches) {
+    SPACE_SIZE = 50;
+    xImage.src = "../img/tictac/X_extrasmall.png";
+    oImage.src = "../img/tictac/O_extrasmall.png";
+  } else {
+    SPACE_SIZE = 100;
+    xImage.src = "../img/tictac/X_small.png";
+    oImage.src = "../img/tictac/O_small.png";
+  }
+
   const COMBOS = [
     [0, 1, 2],
     [3, 4, 5],
@@ -23,22 +33,50 @@ function init(player, OPPONENT) {
     [2, 4, 6],
   ];
   let GAME_OVER = false;
-  function drawBoard() {
-    canvas.width = 450;
-    canvas.height = 450;
-    let id = 0;
-    for (let i = 0; i < ROW; i++) {
-      board[i] = [];
-      for (let j = 0; j < COLUMN; j++) {
-        board[i][j] = id;
-        id++;
 
-        ctx.strokeStyle = "#FFF";
-        ctx.lineWidth = 3;
-        ctx.strokeRect(j * SPACE_SIZE, i * SPACE_SIZE, SPACE_SIZE, SPACE_SIZE);
+  function drawBoard() {
+    let id = 0;
+    if (respVersion.matches) {
+      canvas.width = 150;
+      canvas.height = 150;
+      for (let i = 0; i < ROW; i++) {
+        board[i] = [];
+        for (let j = 0; j < COLUMN; j++) {
+          board[i][j] = id;
+          id++;
+
+          ctx.strokeStyle = "#FFF";
+          ctx.lineWidth = 3;
+          ctx.strokeRect(
+            j * SPACE_SIZE,
+            i * SPACE_SIZE,
+            SPACE_SIZE,
+            SPACE_SIZE
+          );
+        }
       }
+      canvas.style.visibility = "visible";
+    } else {
+      canvas.width = 300;
+      canvas.height = 300;
+      for (let i = 0; i < ROW; i++) {
+        board[i] = [];
+        for (let j = 0; j < COLUMN; j++) {
+          board[i][j] = id;
+          id++;
+
+          ctx.strokeStyle = "#FFF";
+          ctx.lineWidth = 3;
+          ctx.strokeRect(
+            j * SPACE_SIZE,
+            i * SPACE_SIZE,
+            SPACE_SIZE,
+            SPACE_SIZE
+          );
+        }
+      }
+      canvas.style.visibility = "visible";
     }
-    canvas.style.visibility = "visible";
   }
   drawBoard();
 
@@ -195,7 +233,10 @@ function init(player, OPPONENT) {
 
   function showGameOver(player) {
     let message = player == "tie" ? "Remis!" : "Wygrywa";
-    let imgSrc = `../img/tictac/${player}.png`;
+    let imgSrc = `../img/tictac/${player}_small.png`;
+    if (respVersion.matches) {
+      imgSrc = `../img/tictac/${player}_extrasmall.png`;
+    }
 
     if (player == "tie") {
       gameOverElement.innerHTML = `

@@ -10,7 +10,7 @@
     width: 400px;
     height: 400px;
     position: relative;
-    margin-top: 5em;
+    margin-top: 10px;
 }
 
 .tile {
@@ -45,7 +45,7 @@
 }
 
 #rand-button {
-    margin-top: 10em;
+    margin-top: 10px;
 }
 
 #rand-button > button {
@@ -65,4 +65,42 @@
 
 #info {
     color:white;
+}
+
+@media only screen and (max-width: 436px) {
+    #board {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .pictures {
+        display: grid;
+        grid-template-columns: repeat(4, 50px);
+        grid-template-rows: repeat(1, 50px);
+        justify-content: center;
+        margin: 20px;
+    }
+
+        .tile {
+            position: absolute;
+            border: 1px solid white;
+            height: 50px;
+            width: 50px;
+            color: transparent;
+            font-size: 30px;
+            transition: top 0.2s linear, left 0.2s linear;
+            background: url('../img/puzzle/picture1.png');
+            cursor: pointer;
+        }
+
+        .pictures img {
+            width:47px;
+            height: 47px;
+        }
+
+        #info {
+            width: 200px;
+        }
 }
