@@ -1,0 +1,68 @@
+.game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#board {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    margin-top: 5em;
+}
+
+.tile {
+    position: absolute;
+    border: 1px solid white;
+    height: 100px;
+    width: 100px;
+    color: transparent;
+    font-size: 30px;
+    transition: top 0.2s linear, left 0.2s linear;
+    background: url('../img/puzzle/picture1.png');
+    cursor: pointer;
+}
+
+.tile:last-of-type {
+    background: none;
+    border: none;
+}
+
+.pictures {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(1, 100px);
+    justify-content: center;
+    margin: 20px;
+}
+
+.pictures>div {
+    border: 2px solid white;
+    margin: 0 -1px -1px 0;
+    cursor: pointer;
+}
+
+#rand-button {
+    margin-top: 10em;
+}
+
+#rand-button > button {
+    font-size: 2rem;
+    background-color: #0093AB;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: #FFF;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#rand-button>button:hover {
+    opacity: 0.5;
+}
+
+#info {
+    color:white;
+}

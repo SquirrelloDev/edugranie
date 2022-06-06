@@ -20,7 +20,7 @@ const qaDataBase =[
     {
         questionId: 3,
         question: "This girl is wearing a dress. What colour of that dress is?",
-        questionPolish: "Ta dziewczynka nosi sunkienkę. Jakiego koloru jest ta sukienka?",
+        questionPolish: "Ta dziewczynka nosi sukienkę. Jakiego koloru jest ta sukienka?",
         questionImage: 'red.jpg',
         answers: ["Red", "Green", "Blue", "Yellow"],
         chosenAnswer: '',

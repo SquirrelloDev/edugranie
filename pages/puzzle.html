@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puzzle | Edugranie.pl</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/8d5fdb794a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Dodaj swój własny plik CSS poniżej menu -->
+    <link rel="stylesheet" href="../css/menu.css" />
+    <link rel="stylesheet" href="../css/puzzle.css" />
+    <script src="../js/util.js" defer></script>
+  </head>
+  <body>
+    <nav class="game-navigation">
+      <div class="game-navigation__content">
+        <a class="return-btn" href="../index.html">
+          <div class="return-btn__circle">
+            <i class="fa-solid fa-arrow-left"></i>
+          </div>
+          <p class="return-text">Powrót</p>
+        </a>
+        <h1 class="game-title">Puzzle</h1>
+        <div class="settings-box">
+          <button class="setting-help">
+            <i class="fa-solid fa-circle-question"></i></button>
+            <button class="setting-cog"><i class="fa-solid fa-gear"></i></button>
+        </div>
+      </div>
+      <div class="settings">
+        <p class="sound">
+          Dźwięki
+          <button class="sound-switch">
+            <i class="fa-solid fa-volume-high"></i>
+          </button>
+        </p>
+      </div>
+    </nav>
+    <section class="game">
+      <div id="rand-button">
+        <button type="button" onclick="randomTiles()">Losuj!</button>
+      </div>
+      <div id="board">
+        <div class="tile" onclick="changeTiles(this)"></div>
+        <div class="tile" onclick="changeTiles(this)"></div>
+        <div class="tile" onclick="changeTiles(this)"></div>
+        <div class="tile" onclick="changeTiles(this)"></div>
+        <div class="tile" onclick="changeTiles(this)"></div>
+        <div class="tile" onclick="changeTiles(this)"></div>
+        <div class="tile" onclick="changeTiles(this)"></div>
+        <div class="tile" onclick="changeTiles(this)"></div>
+        <div class="tile" onclick="changeTiles(this)"></div>
+        <div class="tile" onclick="changeTiles(this)"></div>
+        <div class="tile" onclick="changeTiles(this)"></div>
+        <div class="tile" onclick="changeTiles(this)"></div>
+        <div class="tile" onclick="changeTiles(this)"></div>
+        <div class="tile" onclick="changeTiles(this)"></div>
+        <div class="tile" onclick="changeTiles(this)"></div>
+        <div class="tile" onclick="changeTiles(this)"></div>
+      </div>
+      <div class="pictures">
+        <div id="img1" onclick="changePicture(this)">
+          <img src="../img/puzzle/picture1.png" width="97" height="97" />
+          <!-- picture source: https://przedszkole-montessori.com.pl/wp-content/uploads/2021/02/Bajka.jpg -->
+        </div>
+        <div id="img2" onclick="changePicture(this)">
+          <img src="../img/puzzle/picture2.png" width="97" height="97" />
+          <!-- picture source: https://www.teahub.io/photos/full/87-876461_bambi-wallpapers-hd.jpg -->
+        </div>
+        <div id="img3" onclick="changePicture(this)">
+          <img src="../img/puzzle/picture3.png" width="97" height="97" />
+          <!-- picture source: https://miastodzieci.pl/wp-content/uploads/2020/10/profile_-_stitch.jpg -->
+        </div>
+        <div id="img4" onclick="changePicture(this)">
+          <img src="../img/puzzle/picture4.png" width="97" height="97" />
+          <!-- picture source: https://www.naklejkascienna.pl/ori-naklejka-cienna-dla-dzieci-malpka-8014_12379.jpg -->
+        </div>
+      </div>
+      <div id="info">
+        <h2>Aby zmienić obrazek kliknij na jeden z powyższych</h2>
+      </div>
+    </section>
+    <script src="../js/puzzle.js"></script>
+  </body>
+</html>
