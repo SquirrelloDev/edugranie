@@ -192,7 +192,6 @@ function changePicture(x) {
     }
     render(puzzleBoard, puzzleState);
   } else {
-    console.log(x);
     let clickedID = x.id;
     if (clickedID == "img1") {
       for (let i = 0; i < 4; i++) {
