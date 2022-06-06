@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kółko i krzyżyk | Edugranie.pl</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/8d5fdb794a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Dodaj swój własny plik CSS poniżej menu -->
+    <link rel="stylesheet" href="../css/menu.css" />
+    <link rel="stylesheet" href="../css/tictac.css" />
+    <script src="../js/util.js" defer></script>
+  </head>
+  <body>
+    <nav class="game-navigation">
+      <div class="game-navigation__content">
+        <a class="return-btn" href="../index.html">
+          <div class="return-btn__circle">
+            <i class="fa-solid fa-arrow-left"></i>
+          </div>
+          <p class="return-text">Powrót</p>
+        </a>
+        <h1 class="game-title">Kółko i krzyżyk</h1>
+        <div class="settings-box">
+          <button class="setting-help">
+            <i class="fa-solid fa-circle-question"></i></button
+          ><button class="setting-cog"><i class="fa-solid fa-gear"></i></button>
+        </div>
+      </div>
+      <div class="settings">
+        <p class="sound">
+          Dźwięki
+          <button class="sound-switch">
+            <i class="fa-solid fa-volume-high"></i>
+          </button>
+        </p>
+      </div>
+    </nav>
+
+    <section class="game">
+      <div class="options">
+        <h1>Chcę zagrać z:</h1>
+        <div class="computer">komputerem</div>
+        <div class="friend">innym graczem</div>
+        <h1>Wybieram symbol:</h1>
+        <div class="x">X</div>
+        <div class="o">O</div>
+        <h1>---</h1>
+        <div class="play">Start!</div>
+      </div>
+      <canvas
+        id="cvs"
+        style="visibility: hidden; background-color: #0093ab"
+      ></canvas>
+      <div class="gameover hide"></div>
+    </section>
+    <!-- Zmień nazwę pliku JS na nazwę gry -->
+    <script src="../js/menu_tic_tac.js"></script>
+    <script src="../js/tictac.js"></script>
+  </body>
+</html>

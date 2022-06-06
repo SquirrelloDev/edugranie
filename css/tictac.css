@@ -1,0 +1,69 @@
+.hide {
+  display: none;
+}
+
+.active {
+  background-color: #FFD167 !important;
+  color: #000 !important;
+}
+
+#cvs {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 15em;
+  border: 2px solid #FFF;
+}
+
+.options h1 {
+  font-size: 2.6rem;
+}
+
+.options {
+  margin: 15em;
+  text-align: center;
+  color: #FFF;
+}
+
+.options div {
+  display: inline-block;
+  font-size: 2rem;
+  background-color: #0093AB;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.options div:hover {
+  opacity: 0.5;
+}
+
+.gameover {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 10px;
+  text-align: center;
+  color: #FFF;
+  align-items: center;
+}
+
+.playagain {
+  font-size: 2rem;
+  background-color: #0093AB;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.playagain:hover {
+  opacity: 0.5;
+}
+
+.gameover h1 {
+  font-size: 2.6rem;
+}
