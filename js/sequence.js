@@ -49,7 +49,7 @@ function nextStep(){
 
 function nextRound(){
     level += 1
-    TilesContainer.classList.add('unclickable')
+    TilesContainer.classList.remove('unclickable');
     info.textContent = "Zaczekaj na wzór od komputera!"
 
     const nextSequence = [...sequence]
@@ -81,6 +81,7 @@ function handleClick(tile){
     if(yourSequence.length === sequence.length){
         yourSequence = []
         info.textContent = "Dobrze Ci idzie!"
+        TilesContainer.classList.add('unclickable');
         setTimeout(()=>{
             nextRound()
         }, 1000)
