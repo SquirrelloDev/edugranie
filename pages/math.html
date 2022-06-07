@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Działania matematyczne | Edugranie.pl</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/8d5fdb794a.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Dodaj swój własny plik CSS poniżej menu -->
+    <link rel="stylesheet" href="../css/menu.css"> 
+    <link rel="stylesheet" href="../css/math.css">
+    <script src="../js/util.js" defer></script>
+    <!-- Zmień nazwę pliku JS na nazwę gry -->
+    <script src="../js/math.js" defer></script>
+</head>
+<body>
+    <nav class="game-navigation">
+        <div class="game-navigation__content">
+            <a class="return-btn" href="../index.html"><div class="return-btn__circle"><i class="fa-solid fa-arrow-left"></i></div><p class="return-text">Powrót</p></a>
+            <h1 class="game-title">Matematyka</h1>
+            <div class="settings-box"><button class="setting-help"><i class="fa-solid fa-circle-question"></i></button><button class="setting-cog"><i class="fa-solid fa-gear"></i></button></div>
+        </div>
+        <div class="settings">
+            <p class="sound">Dźwięki <button class="sound-switch"><i class="fa-solid fa-volume-high"></i></button></p>
+        </div>
+    </nav>
+    <section class="game">
+        <!-- Umieść tu kod HTML gry -->
+        <p class="equation">
+            <span id="a_id"></span>
+            <span id="operator_id"></span>
+            <span id="b_id"></span>
+            <span id="eq_id"></span>
+            <span id="result_id"></span>
+        </p>
+        <div class="buttonBox">
+            <button type="button" id="ans1_button" class = "answerButton hover" ></button>
+            <button type="button" id="ans2_button" class = "answerButton hover"></button>
+            <button type="button" id="ans3_button" class = "answerButton hover"></button>
+        </div>
+        
+        <div class="last-screen">
+            <h2 class="score-text">Lorem, ipsum dolor.</h2>
+            <h3 class="score">Lorem ipsum dolor sit.</h3>
+            <button type="button" id="newGame_id" class = "answerButton hover">NOWA GRA</button>
+            <div class="last-screen-results">
+                <h2 class="answer-heading">Odpowiedzi:</h2>
+                    <ol class="answer-list">                  
+                    </ol>
+            </div>
+        </div>
+        <template class="last-screen-template">
+             <div class="list-item-box">
+                <span class="user-answer"></span><span class="result-info"></span> 
+              </div>
+        </template>
+
+    </section>
+</body>
+</html>
