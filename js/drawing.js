@@ -93,7 +93,6 @@ sizeBtn.addEventListener('click', () => {
     
     })
 downloadBtn.addEventListener('click', ()=>{
-    console.log('xd');
     const imgSnapshot = canvas.toDataURL();
     downloadBtn.setAttribute('href', imgSnapshot);
 

@@ -133,7 +133,7 @@ const prepareRound = (round = 0) => {
             scoreText.textContent = "Świetnie Ci idzie, ale czy zdobędziesz wszystkie punkty? Spróbuj ponownie klikając 'Rozpocznij od nowa'";
         }
         else if(score === 7){
-            scoreText.textContent = "Brawo! Jesteś mistrzem słówek!";
+            scoreText.textContent = "Brawo! Jesteś mistrzem figur!";
         }
         scoreValue.textContent = `Twój wynik ${score}/7`;
         displayAnswers();
