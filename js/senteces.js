@@ -109,8 +109,8 @@ function quizLoad() {
     d_text.innerText = quizADane.d;
 }
 
-function setAnswers() {
-    let odp = undefined;
+function setAnswer() {
+    let odp = null;
 
     odpB.forEach((odpC) => {
         if (odpC.checked) {
@@ -130,7 +130,7 @@ function disableCheckingState() {
 nextActionBtn.addEventListener("click", check);
 
 function check() {
-    const odp = setAnswers();
+    const odp = setAnswer();
 
     if (odp) {
         if (odp === quizDane[quizA].correct) {

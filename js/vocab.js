@@ -107,7 +107,7 @@ const orderedList = document.querySelector('.answer-list')
 
 let round = 0, score = 0, pulseInterval, pulseTimeout, polishEnabled;
 const prepareRound = (round = 0) => {
-    if (round > 9) {
+    if (round > (qaDataBase.length - 1)) {
         questionBox.style.display = 'none';
         answerBox.style.display = 'none';
         imageBox.style.display = 'none';

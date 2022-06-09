@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory | Edugranie.pl</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/8d5fdb794a.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Dodaj swój własny plik CSS poniżej menu -->
+    <link rel="stylesheet" href="../css/menu.css"> 
+    <link rel="stylesheet" href="../css/memory.css">
+    <script src="../js/util.js" defer></script>
+    <!-- Zmień nazwę pliku JS na nazwę gry -->
+    <script src="../js/memory.js" defer></script>
+</head>
+<body>
+    <nav class="game-navigation">
+        <div class="game-navigation__content">
+            <a class="return-btn" href="../index.html"><div class="return-btn__circle"><i class="fa-solid fa-arrow-left"></i></div><p class="return-text">Powrót</p></a>
+            <h1 class="game-title">Memory</h1>
+            <div class="settings-box"><button class="setting-help"><i class="fa-solid fa-circle-question"></i></button><button class="setting-cog"><i class="fa-solid fa-gear"></i></button></div>
+        </div>
+        <div class="settings">
+            <p class="sound">Dźwięki <button class="sound-switch"><i class="fa-solid fa-volume-high"></i></button></p>
+        </div>
+    </nav>
+    <section class="game">
+        
+        <div class="xd">
+            <div class="content">            
+        <div class="container">
+          <button type="button" id="odnowa" onClick="location.reload();">Zacznij od nowa</button>
+            <div class="cards">
+              <div class="card" data-animal="duck">
+                <img src="../img/memory/duck.png" alt="kaczka" />
+              </div>
+              <div class="card" data-animal="lion">
+                <img src="../img/memory/lion.png" alt="lew" />
+              </div>
+              <div class="card" data-animal="dog">
+                <img src="../img/memory/dog.png" alt="pies" />
+              </div>
+              <div class="card" data-animal="tiger">
+                <img src="../img/memory/tiger.png" alt="tygrys" />
+              </div>
+              <div class="card" data-animal="jaguar">
+                <img src="../img/memory/jaguar.png" alt="jaguar" />
+              </div>
+              <div class="card" data-animal="cat">
+                <img src="../img/memory/cat.png" alt="kot" />
+              </div>
+              <div class="card" data-animal="duck">
+                <img src="../img/memory/duck.png" alt="kaczka" />
+              </div>
+              <div class="card" data-animal="dog">
+                <img src="../img/memory/dog.png" alt="pies" />
+              </div>
+              <div class="card" data-animal="jaguar">
+                <img src="../img/memory/jaguar.png" alt="jaguar" />
+              </div>
+              <div class="card" data-animal="lion">
+                <img src="../img/memory/lion.png" alt="lew" />
+              </div>
+              <div class="card" data-animal="cat">
+                <img src="../img/memory/cat.png" alt="kot" />
+              </div>
+              <div class="card" data-animal="snake">
+                <img src="../img/memory/snake.png" alt="wąż" />
+              </div>
+              <div class="card" data-animal="tiger">
+                <img src="../img/memory/tiger.png" alt="tygrys" />
+              </div>
+              <div class="card" data-animal="panther">
+                <img src="../img/memory/panther.png" alt="pantera" />
+              </div>
+              <div class="card" data-animal="panther">
+                <img src="../img/memory/panther.png" alt="pantera" />
+              </div>
+              <div class="card" data-animal="snake">
+                <img src="../img/memory/snake.png" alt="wąż" />                
+              </div>
+            </div>
+          </div> 
+        </div>
+    </section>
+</body>
+</html>
